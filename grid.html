@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif; /* Estilo de fuente */
+        display: flex; /* Usamos un diseño flexible */
+        justify-content: center; /* Centramos las tablas horizontalmente */
+        align-items: flex-start; /* Alineamos las tablas en la parte superior */
+        flex-wrap: wrap; /* Permitimos que las tablas se acomoden en varias líneas si es necesario */
+        gap: 20px; /* Espacio entre las tablas */
+        margin: 20px; /* Margen alrededor del cuerpo */
+      }
+
+      /* Estilo para las tablas */
+      table {
+        border-collapse: collapse; /* Combina bordes adyacentes */
+        width: 150px; /* Ancho fijo para todas las tablas */
+        height: 150px; /* Alto fijo para todas las tablas */
+        margin: 10px; /* Espaciado adicional entre tablas */
+      }
+
+      /* Estilo para las celdas */
+      td {
+        border: 1px solid #000; /* Borde negro alrededor de cada celda */
+        text-align: center; /* Texto centrado horizontalmente */
+        vertical-align: middle; /* Texto centrado verticalmente */
+        font-weight: bold; /* Texto en negrita */
+        background-color: #f0f0f0; /* Fondo gris claro */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Primer diseño -->
+    <table>
+      <tr>
+        <td colspan="2">A</td>
+        <!-- Celda A ocupa dos columnas -->
+      </tr>
+      <tr>
+        <td>B</td>
+        <!-- Celda B ocupa una celda -->
+        <td>C</td>
+        <!-- Celda C ocupa una celda -->
+      </tr>
+    </table>
+
+    <!-- Segundo diseño -->
+    <table>
+      <tr>
+        <td>A</td>
+        <!-- Celda A ocupa una celda -->
+        <td rowspan="2">B</td>
+        <!-- Celda B ocupa dos filas -->
+      </tr>
+      <tr>
+        <td>C</td>
+        <!-- Celda C ocupa una celda -->
+      </tr>
+    </table>
+
+    <!-- Tercer diseño -->
+    <table border="1">
+      <tr>
+        <td colspan="3">A</td>
+        <!-- Celda A ocupa tres columnas -->
+        <td>B</td>
+        <!-- Celda B ocupa una celda -->
+      </tr>
+      <tr>
+        <td>C</td>
+        <!-- Celda C ocupa una celda -->
+        <td colspan="2">D</td>
+        <!-- Celda D ocupa dos columnas -->
+        <td>E</td>
+        <!-- Celda E ocupa una celda -->
+      </tr>
+      <tr>
+        <td colspan="4">F</td>
+        <!-- Celda F ocupa toda la fila (cuatro columnas) -->
+      </tr>
+      <tr>
+        <td>G</td>
+        <!-- Celda G ocupa una celda -->
+        <td>H</td>
+        <!-- Celda H ocupa una celda -->
+        <td>I</td>
+        <!-- Celda I ocupa una celda -->
+        <td>J</td>
+        <!-- Celda J ocupa una celda -->
+      </tr>
+    </table>
+
+    <!-- Cuarto diseño -->
+    <table border="1">
+      <tr>
+        <td>A</td>
+        <!-- Celda A ocupa una celda -->
+        <td>B</td>
+        <!-- Celda B ocupa una celda -->
+        <td rowspan="3">C</td>
+        <!-- Celda C ocupa tres filas -->
+        <td>D</td>
+        <!-- Celda D ocupa una celda -->
+      </tr>
+      <tr>
+        <td rowspan="2">E</td>
+        <!-- Celda E ocupa dos filas -->
+        <td>F</td>
+        <!-- Celda F ocupa una celda -->
+        <td rowspan="3">G</td>
+        <!-- Celda G ocupa tres filas -->
+      </tr>
+      <tr>
+        <td>H</td>
+        <!-- Celda H ocupa una celda -->
+      </tr>
+      <tr>
+        <td>I</td>
+        <!-- Celda I ocupa una celda -->
+        <td>J</td>
+        <!-- Celda J ocupa una celda -->
+        <td>K</td>
+        <!-- Celda K ocupa una celda -->
+      </tr>
+    </table>
+  </body>
+</html>
